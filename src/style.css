@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.grid-container-title {
+  display: grid;
+  grid-template-areas:
+    "title title title title"
+    "input input input input"
+    "one two three four";
+  grid-gap: 10px;
+  /* grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 100%; */
+}
+
+.title {
+  grid-area: title;
+}
+.one {
+  grid-area: one;
+  justify-self: center;
+}
+.two {
+  grid-area: two;
+  justify-self: center;
+}
+.three {
+  grid-area: three;
+  justify-self: center;
+}
+.four {
+  grid-area: four;
+  justify-self: center;
+}
+.five {
+  grid-area: five;
+  justify-self: center;
+}
+.six {
+  grid-area: six;
+  justify-self: center;
+}
+.seven {
+  grid-area: seven;
+  justify-self: center;
+}
+.eight {
+  grid-area: eight;
+  justify-self: center;
+}
+.nine {
+  grid-area: nine;
+  justify-self: center;
+}
+.reset {
+  grid-area: reset;
+  justify-self: center;
+}
+.divide {
+  grid-area: divide;
+  justify-self: center;
+}
+.multiple {
+  grid-area: multiple;
+  justify-self: center;
+}
+.minus {
+  grid-area: minus;
+  justify-self: center;
+}
+.plus {
+  grid-area: plus;
+  justify-self: center;
+}
+.egal {
+  grid-area: egal;
+  justify-self: center;
+  height: 100%;
+}
+.dott {
+  grid-area: dott;
+  justify-self: center;
+}
+.zeros {
+  grid-area: zeros;
+  justify-self: center;
+  /* width: 100%; */
+}
+.grid-container-title > div,
+.grid-container-title > h2 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.grid-container-keypad {
+  display: grid;
+  justify-content: center;
+  grid-template-areas:
+    "reset   divide  multiple     minus "
+    "seven   eight   nine         plus  "
+    "four    five    six          plus  "
+    "one     two     three        egal  "
+    "zeros   zeros   dott         egal  ";
+
+  grid-gap: 0.15vw;
+}
+
+.input {
+  border-radius: 15px;
+  grid-area: input;
+  border-color: coral;
+  border-style: solid;
+  text-align: justify;
+}
