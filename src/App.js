@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Name from "./components/Name";
+import InputValue from "./components/InputValue";
 import KeypadButton from "./components/KeypadButton";
 import "./style.css";
 import _ from "underscore";
@@ -112,6 +112,7 @@ class App extends Component {
           ) {
             let parseA = parseInt(a, 10);
             let parseB = parseInt(b, 10);
+
             switch (sign) {
               case "+":
                 result = parseA + parseB;
@@ -137,6 +138,9 @@ class App extends Component {
 
         //-------------------------------------
         if (value === "=") {
+          if (sign === undefined) {
+            result = parseInt(a, 10);
+          }
           stringValue = result.toString();
           return stringValue;
         }
@@ -158,9 +162,9 @@ class App extends Component {
       <div className="App">
         <div className="grid-container-title">
           <h2 className="title">Calculatrice</h2>
-          <Name response={this.convertToStringValue()} />
         </div>
         <div className="grid-container-keypad">
+          <InputValue response={this.convertToStringValue()} />
           <KeypadButton
             name="nine"
             sign="9"

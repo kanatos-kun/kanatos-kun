@@ -6,13 +6,9 @@ body {
 
 .grid-container-title {
   display: grid;
-  grid-template-areas:
-    "title title title title"
-    "input input input input"
-    "one two three four";
+  justify-content: center;
+  grid-template-areas: "title title title title";
   grid-gap: 10px;
-  /* grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 100%; */
 }
 
 .title {
@@ -21,72 +17,93 @@ body {
 .one {
   grid-area: one;
   justify-self: center;
+  width: 100%;
+  height: 10vh;
 }
 .two {
   grid-area: two;
   justify-self: center;
+  width: 100%;
 }
 .three {
   grid-area: three;
   justify-self: center;
+  width: 100%;
 }
 .four {
   grid-area: four;
   justify-self: center;
+  width: 100%;
+  height: 10vh;
 }
 .five {
   grid-area: five;
   justify-self: center;
+  width: 100%;
 }
 .six {
   grid-area: six;
   justify-self: center;
+  width: 100%;
 }
 .seven {
   grid-area: seven;
   justify-self: center;
+  width: 100%;
+  height: 10vh;
 }
 .eight {
   grid-area: eight;
   justify-self: center;
+  width: 100%;
 }
 .nine {
   grid-area: nine;
   justify-self: center;
+  width: 100%;
 }
 .reset {
   grid-area: reset;
   justify-self: center;
+  width: 100%;
+  height: 10vh;
 }
 .divide {
   grid-area: divide;
   justify-self: center;
+  width: 100%;
 }
 .multiple {
   grid-area: multiple;
   justify-self: center;
+  width: 100%;
 }
 .minus {
   grid-area: minus;
   justify-self: center;
+  width: 100%;
 }
 .plus {
   grid-area: plus;
   justify-self: center;
+  width: 100%;
 }
 .egal {
   grid-area: egal;
   justify-self: center;
   height: 100%;
+  width: 100%;
 }
 .dott {
   grid-area: dott;
   justify-self: center;
+  width: 100%;
 }
 .zeros {
   grid-area: zeros;
   justify-self: center;
-  /* width: 100%; */
+  width: 100%;
+  height: 10vh;
 }
 .grid-container-title > div,
 .grid-container-title > h2 {
@@ -98,19 +115,57 @@ body {
   display: grid;
   justify-content: center;
   grid-template-areas:
+    "input    input  input        input"
     "reset   divide  multiple     minus "
     "seven   eight   nine         plus  "
     "four    five    six          plus  "
     "one     two     three        egal  "
     "zeros   zeros   dott         egal  ";
 
-  grid-gap: 0.15vw;
+  grid-gap: 1vw;
 }
 
 .input {
-  border-radius: 15px;
+  /* border-radius: 15px; */
   grid-area: input;
-  border-color: coral;
-  border-style: solid;
-  text-align: justify;
+  /* border-color: coral; */
+  /* border-style: solid; */
+  background-color: #e3e3e3;
+  font-size: 200%;
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  word-wrap: break-word;
+  /* text-align: justify; */
+}
+button {
+  background-color: #e3e3e3;
+  border-style: none;
+}
+
+button:hover {
+  background-color: #c9c9c9;
+}
+/* ecran telephone */
+/* @media screen and (max-width: 350px) {
+  .input {
+    width: 100vw;
+  }
+} */
+/* ecran tablette */
+/* @media screen and (max-width: 720px) {
+  .input {
+    width: 100vw;
+  }
+} */
+
+/* ecran ordinateur */
+@media screen and (min-width: 720px) {
+  .input {
+    width: 50vw;
+  }
+
+  .grid-container-keypad {
+    grid-gap: 0.25vw;
+  }
 }
